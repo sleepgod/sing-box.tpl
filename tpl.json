@@ -772,7 +772,7 @@
                 "outbound": "direct"
             },
             {
-                "clash_mode": "Direct",
+                "clash_mode": "direct",
                 "outbound": "direct"
             },
             {
