@@ -4,7 +4,7 @@ USE_PROCD=1
 START=99
 
 PROG="/usr/bin/mihomo"
-CONF_PATH="/etc/nikki/run"
+CONF_PATH="/etc/conig/mihomo"
 
 start_service() {
     procd_open_instance
