@@ -1,7 +1,7 @@
 proxy-groups:
   - name: 默认
     type: select
-    proxies: [自动选择,DIRECT,香港,台湾,日本,新加坡,美国,负载均衡香港,其它地区,全部节点]
+    proxies: [自动选择,DIRECT,香港,台湾,日本,新加坡,美国,负载均衡香港,负载均衡日本,其它地区,全部节点]
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
   - name: 负载均衡香港
