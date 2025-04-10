@@ -1,0 +1,196 @@
+proxy-groups:
+  - name: 默认
+    type: select
+    proxies: [自动选择,DIRECT,香港,台湾,日本,新加坡,美国,负载均衡香港,其它地区,全部节点]
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+
+  - name: 负载均衡香港
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: 负载均衡日本
+    type: load-balance
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)日本|jp|japan"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: Google
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
+    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Telegram
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Twitter
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: YouTube
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Netflix
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Spotify
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Github
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  - name: Tiktok
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)(新加坡|sg|singapore)"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+
+  - name: 国内
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    proxies:  [DIRECT,默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择]
+
+  - name: 其他
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,DIRECT]
+
+  #分隔,下面是地区分组
+  - name: 香港
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: 台湾
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)台|tw|taiwan"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: 日本
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)日本|jp|japan"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: 美国
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)美国|us|unitedstates|united states"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: 新加坡
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)(新加坡|sg|singapore)"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: 其它地区
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+
+  - name: 全部节点
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 10
+    include-all: true
+    exclude-type: direct
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+
+  - name: 自动选择
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    include-all: true
+    exclude-type: direct
+    tolerance: 10
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+
+rule-providers:
+  dwx:
+    type: http
+    behavior: domain
+    url: "https://testingcf.jsdelivr.net/gh/sleepgod/sing-box.tpl@main/mihomo.yaml"
+    path: ./ruleset/dwx.yaml
+    interval: 86400
+
+rules:
+  - DOMAIN-SUFFIX,dwx1127.eu.org,DIRECT
+  - DOMAIN-SUFFIX,dwx.cloudns.ch,默认
+  - DOMAIN-SUFFIX,plex.tv,DIRECT
+  - RULE-SET,dwx,默认
+  - GEOIP,lan,DIRECT,no-resolve
+  - GEOSITE,tiktok,Tiktok
+  - GEOSITE,docker,默认
+  - GEOSITE,cloudflare,默认
+  - GEOSITE,github,Github
+  - GEOSITE,twitter,Twitter
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,google,Google
+  - GEOSITE,telegram,Telegram
+  - GEOSITE,netflix,Netflix
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,gfw,默认
+  - GEOSITE,CN,国内
+  - GEOSITE,microsoft@cn,国内
+  - GEOSITE,apple@cn,国内
+  - GEOSITE,geolocation-!cn,其他
+
+  - GEOIP,google,Google
+  - GEOIP,netflix,Netflix
+  - GEOIP,telegram,Telegram
+  - GEOIP,twitter,Twitter
+  - GEOIP,CN,国内
+  - MATCH,国内
